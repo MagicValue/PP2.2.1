@@ -3,7 +3,7 @@ package hiber.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "users")
+@Table(name = "user")
 public class User {
 
    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
@@ -38,12 +38,6 @@ public class User {
       this.firstName = firstName;
       this.lastName = lastName;
       this.email = email;
-   }
-   public User(String firstName, String lastName, String email, Car car) {
-      this.firstName = firstName;
-      this.lastName = lastName;
-      this.email = email;
-      this.car = car;
    }
 
    public Long getId() {

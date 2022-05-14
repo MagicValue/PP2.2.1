@@ -7,6 +7,7 @@ import hiber.service.UserService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class MainApp {
@@ -36,7 +37,8 @@ public class MainApp {
          System.out.println(" ");
       }
 
-      System.out.println(userService.findOwner("jiguli", 1970));
+
+      System.out.println(userService.findOwner("Jiguli", 1970));
       System.out.println(" ");
 
 

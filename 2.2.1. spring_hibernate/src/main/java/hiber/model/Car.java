@@ -3,7 +3,7 @@ package hiber.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "сars")
+@Table(name = "сar")
 public class Car {
 
     public User getUser() {
@@ -16,7 +16,7 @@ public class Car {
     }
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "users_id")
+    @JoinColumn(name = "users_id", referencedColumnName = "id")
     private User user;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
