@@ -15,8 +15,10 @@ public class Car {
         return user;
     }
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "users_id", referencedColumnName = "id")
+//    @OneToOne(cascade = CascadeType.ALL)
+//    @JoinColumn(name = "users_id", referencedColumnName = "id")
+//    private User user;
+    @OneToOne
     private User user;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
